@@ -20,7 +20,7 @@ Current build status
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/gmprocess-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/gmprocess-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/gmprocess-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/gmprocess-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/gmprocess-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/gmprocess-feedstock/branch/master)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
