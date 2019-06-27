@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/usgs/groundmotion-processing/archive/v{{ version }}.tar.gz
+  url: https://github.com/usgs/groundmotion-processing/archive/{{ version }}.tar.gz
   sha256: 82b1f637f82f69413ba4de51238abbe54e9320449a59562578d181f03da6d3ad
 
 build:
