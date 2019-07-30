@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: gmprocess
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/usgs/groundmotion-processing/archive/{{ version }}.tar.gz
-  sha256: 82b1f637f82f69413ba4de51238abbe54e9320449a59562578d181f03da6d3ad
+  sha256: ca463608680df7baf5ce708093d7061f14add17f73ee73ce12e23c8ea7e8906e
 
 build:
   number: 0
@@ -22,14 +22,18 @@ requirements:
     - numpy
     - pip
   run:
-    - configobj
+    - h5py
     - impactutils
+    - libcomcat
     - lxml
     - obspy
     - openpyxl
+    - openquake.engine    
+    - pandas
     - python >=3.6
     - pyyaml
     - requests
+    - pytest
     - vcrpy
     - {{ pin_compatible('numpy') }}
 
