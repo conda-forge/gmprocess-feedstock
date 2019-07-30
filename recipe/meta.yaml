@@ -9,7 +9,7 @@ source:
   sha256: ca463608680df7baf5ce708093d7061f14add17f73ee73ce12e23c8ea7e8906e
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: true  # [win]
 
@@ -22,19 +22,26 @@ requirements:
     - numpy
     - pip
   run:
-    - h5py
-    - impactutils
     - libcomcat
-    - lxml
+    - prov
+    - scipy
     - obspy
     - openpyxl
-    - openquake.engine    
-    - pandas
-    - python >=3.6
-    - pyyaml
-    - requests
     - pytest
+    - setuptools
+    - requests
+    - matplotlib
+    - h5py
+    - pandas
+    - lxml
     - vcrpy
+    - openquake.engine
+    - impactutils
+    - cartopy
+    - pytz
+    - beautifulsoup4
+    - asdf
+    - pyyaml
     - {{ pin_compatible('numpy') }}
 
 test:
