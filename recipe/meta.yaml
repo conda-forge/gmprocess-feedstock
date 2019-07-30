@@ -9,7 +9,7 @@ source:
   sha256: ca463608680df7baf5ce708093d7061f14add17f73ee73ce12e23c8ea7e8906e
 
 build:
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: true  # [win]
 
@@ -25,7 +25,7 @@ requirements:
     - libcomcat
     - prov
     - scipy
-    - obspy
+    - obspy=1.1.1
     - openpyxl
     - pytest
     - setuptools
@@ -40,7 +40,7 @@ requirements:
     - cartopy
     - pytz
     - beautifulsoup4
-    - asdf
+    - pyasdf
     - pyyaml
     - {{ pin_compatible('numpy') }}
 
