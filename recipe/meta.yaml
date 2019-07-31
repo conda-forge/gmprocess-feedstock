@@ -41,7 +41,7 @@ requirements:
     - pytz
     - beautifulsoup4
     - pyasdf
-    - python >=3.6
+    - python
     - pyyaml
     - {{ pin_compatible('numpy') }}
 
