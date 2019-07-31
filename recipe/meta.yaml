@@ -1,4 +1,4 @@
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: gmprocess
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/usgs/groundmotion-processing/archive/{{ version }}.tar.gz
-  sha256: ca463608680df7baf5ce708093d7061f14add17f73ee73ce12e23c8ea7e8906e
+  sha256: fd474c195b89b0e47e18851a94c9fa45247b77c37dc4a6806e58e05dfa679f7a
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: true  # [win]
 
@@ -25,7 +25,7 @@ requirements:
     - libcomcat
     - prov
     - scipy
-    - obspy
+    - obspy >=1.1.1
     - openpyxl
     - pytest
     - setuptools
@@ -40,7 +40,8 @@ requirements:
     - cartopy
     - pytz
     - beautifulsoup4
-    - asdf
+    - pyasdf
+    - python >=3.6
     - pyyaml
     - {{ pin_compatible('numpy') }}
 
