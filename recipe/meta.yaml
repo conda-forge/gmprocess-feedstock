@@ -25,7 +25,7 @@ requirements:
     - libcomcat
     - prov
     - scipy
-    - obspy >=1.1.1
+    - obspy
     - openpyxl
     - pytest
     - setuptools
