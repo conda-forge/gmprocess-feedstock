@@ -31,7 +31,6 @@ requirements:
     - setuptools
     - requests
     - matplotlib
-    - numpy <1.1.7
     - h5py
     - pandas
     - lxml
