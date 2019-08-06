@@ -1,4 +1,4 @@
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: gmprocess
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/usgs/groundmotion-processing/archive/{{ version }}.tar.gz
-  sha256: 163e7349a963b699ee6167bffdc121271187c44b333ff7e6e06a26c13e70257c
+  sha256: f926def2a421dab5f19857d9ba5b5a648e399895d034d1f81b45ea29b68640f3
 
 build:
   number: 0
