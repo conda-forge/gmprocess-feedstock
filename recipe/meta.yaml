@@ -9,7 +9,7 @@ source:
   sha256: c4099cce78325b5122f8a3268acb2ff90c0db03c813eadad44b700f752299a68
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: true  # [win or py27]
 
@@ -31,7 +31,7 @@ requirements:
     - setuptools
     - requests
     - matplotlib
-    - h5py
+    - h5py >=2.8.0
     - pandas
     - lxml
     - vcrpy
