@@ -30,7 +30,7 @@ requirements:
     - pytest
     - setuptools
     - requests
-    - matplotlib
+    - matplotlib-base
     - h5py >=2.8.0
     - pandas
     - lxml
