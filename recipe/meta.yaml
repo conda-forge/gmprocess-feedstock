@@ -9,9 +9,9 @@ source:
   sha256: 09ff3907279afadd1bfa1c0ccbc24f36f6941ca3e42e6626ca003cb16f00bb29
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1
   skip: true  # [win or py27]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -22,28 +22,28 @@ requirements:
     - numpy
     - pip
   run:
+    - python
+    - setuptools
+    - {{ pin_compatible('numpy') }}
+    - beautifulsoup4
+    - cartopy
+    - h5py >=2.8.0
+    - impactutils
     - libcomcat
-    - prov
-    - scipy
+    - lxml
+    - matplotlib-base
     - obspy >=1.1.1
     - openpyxl
-    - pytest
-    - setuptools
-    - requests
-    - matplotlib
-    - h5py >=2.8.0
-    - pandas
-    - lxml
-    - vcrpy
     - openquake.engine
-    - impactutils
-    - cartopy
-    - pytz
-    - beautifulsoup4
+    - pandas
+    - prov
     - pyasdf
-    - python
+    - pytest
+    - pytz
     - pyyaml
-    - {{ pin_compatible('numpy') }}
+    - requests
+    - scipy
+    - vcrpy
 
 test:
   imports:
