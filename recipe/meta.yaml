@@ -1,4 +1,4 @@
-{% set version = "1.0.3" %}
+{% set version = "1.0.4" %}
 
 package:
   name: gmprocess
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/usgs/groundmotion-processing/archive/{{ version }}.tar.gz
-  sha256: 3cf1c696ab32d5de7ad0fad54e4147161384143b01354fc2758912f6f3605ba0
+  sha256: 09ff3907279afadd1bfa1c0ccbc24f36f6941ca3e42e6626ca003cb16f00bb29
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [win or py27]
 
 requirements:
@@ -52,7 +52,7 @@ test:
 about:
   home: https://github.com/usgs/groundmotion-processing
   license: Public Domain
-  summary: 'Fetch and process strong motion waveform/peak amplitude data'
+  summary: Fetch and process strong motion waveform/peak amplitude data
   license_family: Public Domain
   license_file: LICENSE.md
 
