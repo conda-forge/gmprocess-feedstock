@@ -31,6 +31,7 @@ requirements:
     - impactutils
     - libcomcat
     - lxml
+    - mapio
     - matplotlib-base
     - obspy >=1.1.1
     - openpyxl
@@ -43,7 +44,6 @@ requirements:
     - pyyaml
     - requests
     - scipy
-    - vcrpy
 
 test:
   imports:
