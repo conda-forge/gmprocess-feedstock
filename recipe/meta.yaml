@@ -38,6 +38,7 @@ requirements:
     - openquake.engine
     - pandas
     - prov
+    - ps2ff
     - pyasdf
     - pytest
     - pytz
