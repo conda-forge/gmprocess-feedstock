@@ -33,7 +33,6 @@ requirements:
     - matplotlib-base
     - obspy >=1.2.1
     - openpyxl
-    - openquake.engine
     - pandas
     - prov
     - ps2ff
