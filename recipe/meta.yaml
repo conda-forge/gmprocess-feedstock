@@ -1,4 +1,4 @@
-{% set version = "1.1.2" %}
+{% set version = "1.1.3" %}
 
 package:
   name: gmprocess
@@ -6,11 +6,10 @@ package:
 
 source:
   url: https://github.com/usgs/groundmotion-processing/archive/v{{ version }}.tar.gz
-  sha256: 10b334a67f55de31f131d2d65a6d27153f194b8642ea38d23783f5b0c1232c01
+  sha256: 731acd60df803dad609f363d0730959f9e68f3aab7637a013cf0aba67a329be0
 
 build:
-  number: 2
-  skip: true  # [win or py27]
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -33,7 +32,7 @@ requirements:
     - lxml
     - mapio
     - matplotlib-base
-    - obspy >=1.1.1
+    - obspy >=1.2.1
     - openpyxl
     - openquake.engine
     - pandas
@@ -47,7 +46,13 @@ requirements:
     - scipy
 
 test:
-  imports:
+  commands:
+    - gmprocess --help
+    - gmconvert --help
+    - gmsetup --help
+    - gmworkspace --help
+
+imports: 
     - gmprocess
 
 about:
