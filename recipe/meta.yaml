@@ -47,9 +47,8 @@ requirements:
 test:
   commands:
     - gmprocess --help
-    - gmconvert --help
-    - gmsetup --help
-    - gmworkspace --help
+  imports:
+    - gmprocess
 
 about:
   home: https://github.com/usgs/groundmotion-processing
