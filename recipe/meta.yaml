@@ -52,12 +52,12 @@ test:
     - gmsetup --help
     - gmworkspace --help
 
-imports: 
+  imports: 
     - gmprocess
 
 about:
   home: https://github.com/usgs/groundmotion-processing
-  license: Public Domain
+  license: BSD-3-Clause
   summary: Fetch and process strong motion waveform/peak amplitude data
   license_family: Public Domain
   license_file: LICENSE.md
