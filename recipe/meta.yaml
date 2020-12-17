@@ -44,6 +44,7 @@ requirements:
     - pyyaml
     - requests
     - scipy
+    - versioneer
 
 test:
   commands:
