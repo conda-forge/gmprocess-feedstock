@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/usgs/groundmotion-processing/archive/v{{ version }}.tar.gz
   sha256: 266091c7c53c4d21d7e9e593b8cd0ad3eb7f533f0d5bfba2c9ca33ac1ab1f59f
+  patches:
+    - winpi.patch  # [win]
 
 build:
   number: 1

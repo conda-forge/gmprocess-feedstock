@@ -1,0 +1,41 @@
+diff -Naur groundmotion-processing-1.1.3.orig/gmprocess/metrics/cfuncs.c groundmotion-processing-1.1.3/gmprocess/metrics/cfuncs.c
+--- groundmotion-processing-1.1.3.orig/gmprocess/metrics/cfuncs.c	2020-12-11 16:22:25.000000000 -0300
++++ groundmotion-processing-1.1.3/gmprocess/metrics/cfuncs.c	2020-12-17 17:59:20.754878193 -0300
+@@ -1,3 +1,4 @@
++#define _USE_MATH_DEFINES
+ #include <math.h>
+ #include "cfuncs.h"
+ 
+diff -Naur groundmotion-processing-1.1.3.orig/setup.py groundmotion-processing-1.1.3/setup.py
+--- groundmotion-processing-1.1.3.orig/setup.py	2020-12-11 16:22:25.000000000 -0300
++++ groundmotion-processing-1.1.3/setup.py	2020-12-17 18:18:53.017442056 -0300
+@@ -1,3 +1,4 @@
++import os
+ import versioneer
+ from distutils.core import setup
+ from distutils.extension import Extension
+@@ -11,16 +12,22 @@
+ ko_sourcefiles = ["gmprocess/smoothing/konno_ohmachi.pyx",
+                   "gmprocess/smoothing/smoothing.c"]
+ 
++
++libraries = []
++if os.name == 'posix':
++    libraries.append('m')
++
++
+ ext_modules = [
+     Extension(
+         "gmprocess.metrics.oscillators",
+         sourcefiles,
+-        libraries=["m"],
++        libraries=libraries,
+         include_dirs=[numpy.get_include()]),
+     Extension(
+         "gmprocess.smoothing.konno_ohmachi",
+         ko_sourcefiles,
+-        libraries=["m"],
++        libraries=libraries,
+         include_dirs=[numpy.get_include()])
+ ]
+ 
