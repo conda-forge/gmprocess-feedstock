@@ -19,7 +19,7 @@ requirements:
     - python
     - cython
     - numpy
-    - pip ==18.0
+    - pip
   run:
     - python
     - setuptools
