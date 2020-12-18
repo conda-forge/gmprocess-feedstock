@@ -6,7 +6,9 @@ package:
 
 source:
   url: https://github.com/usgs/groundmotion-processing/archive/v{{ version }}.tar.gz
-  sha256: 731acd60df803dad609f363d0730959f9e68f3aab7637a013cf0aba67a329be0
+  sha256: 1c10784a7cf0bd0702d7bfe20cd1fb9db60d39f0f88091142049ac6d049a442b
+  patches:
+    - winpi.patch  # [win]
 
 build:
   number: 0
@@ -19,7 +21,7 @@ requirements:
     - python
     - cython
     - numpy
-    - pip=18.0
+    - pip =18.0
   run:
     - python
     - setuptools
@@ -34,7 +36,7 @@ requirements:
     - matplotlib-base
     - obspy >=1.2.1
     - openpyxl
-    - openquake.engine
+    - openquake.engine >=3.10.1
     - pandas
     - prov
     - ps2ff
