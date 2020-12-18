@@ -23,6 +23,7 @@ requirements:
   run:
     - python
     - setuptools
+    - setuptools_scm
     - {{ pin_compatible('numpy') }}
     - beautifulsoup4
     - cartopy
