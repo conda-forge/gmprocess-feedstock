@@ -13,6 +13,13 @@ source:
 build:
   number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
+  entry_points:
+    - gmconvert = gmprocess.bin.gmconvert:main
+    - gminfo = gmprocess.bin.gminfo:main
+    - gmprocess = gmprocess.bin.gmprocess:main
+    - gmsetup = gmprocess.bin.gmsetup:main
+    - gmworkspace = gmprocess.bin.gmworkspace:main
+    - list_metrics = gmprocess.bin.list_metrics:main
 
 requirements:
   build:
