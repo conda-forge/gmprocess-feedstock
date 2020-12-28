@@ -6,11 +6,20 @@ package:
 
 source:
   url: https://github.com/usgs/groundmotion-processing/archive/v{{ version }}.tar.gz
-  sha256: 731acd60df803dad609f363d0730959f9e68f3aab7637a013cf0aba67a329be0
+  sha256: 266091c7c53c4d21d7e9e593b8cd0ad3eb7f533f0d5bfba2c9ca33ac1ab1f59f
+  patches:
+    - winpi.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
+  entry_points:
+    - gmconvert = gmprocess.bin.gmconvert:main
+    - gminfo = gmprocess.bin.gminfo:main
+    - gmprocess = gmprocess.bin.gmprocess:main
+    - gmsetup = gmprocess.bin.gmsetup:main
+    - gmworkspace = gmprocess.bin.gmworkspace:main
+    - list_metrics = gmprocess.bin.list_metrics:main
 
 requirements:
   build:
@@ -34,7 +43,7 @@ requirements:
     - matplotlib-base
     - obspy >=1.2.1
     - openpyxl
-    - openquake.engine
+    - openquake.engine >=3.10.1
     - pandas
     - prov
     - ps2ff
