@@ -32,9 +32,9 @@ requirements:
   run:
     - python
     - setuptools
+    - setuptools_scm
     - {{ pin_compatible('numpy') }}
-    - beautifulsoup4
-    - cartopy
+    - cython
     - dask
     - h5py >=2.8.0
     - impactutils
@@ -42,16 +42,16 @@ requirements:
     - lxml
     - mapio
     - matplotlib-base
+    - numpy
     - obspy >=1.2.1
     - openpyxl
     - openquake.engine >=3.10.1
     - pandas
-    - prov
     - ps2ff
     - pyasdf
     - pytest
-    - pytz
     - pyyaml
+    - scipy
     - requests
     - scipy
 
