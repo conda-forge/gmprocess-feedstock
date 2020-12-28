@@ -29,6 +29,7 @@ requirements:
     - cython
     - numpy
     - pip
+    - setuptools_scm
   run:
     - python
     - setuptools
