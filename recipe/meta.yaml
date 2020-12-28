@@ -35,6 +35,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - beautifulsoup4
     - cartopy
+    - dask
     - h5py >=2.8.0
     - impactutils
     - libcomcat
