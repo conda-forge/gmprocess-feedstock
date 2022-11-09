@@ -1,17 +1,16 @@
-{% set version = "1.1.3" %}
+{% set version = "v1.2.2" %}
 
 package:
   name: gmprocess
   version: {{ version }}
 
 source:
-  url: https://github.com/usgs/groundmotion-processing/archive/v{{ version }}.tar.gz
-  sha256: 266091c7c53c4d21d7e9e593b8cd0ad3eb7f533f0d5bfba2c9ca33ac1ab1f59f
-  patches:
-    - winpi.patch  # [win]
+  url: https://code.usgs.gov/ghsc/esi/groundmotion-processing/-/archive/{{ version }}/groundmotion-processing-v1.2.2.tar.gz
+  sha256: c4aa8566f59a65e37b712bb48207f193d735aad065bcdd8c9ad5f2f270e88e67
 
 build:
-  number: 1
+  number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - gmconvert = gmprocess.bin.gmconvert:main
@@ -20,59 +19,55 @@ build:
     - gmsetup = gmprocess.bin.gmsetup:main
     - gmworkspace = gmprocess.bin.gmworkspace:main
     - list_metrics = gmprocess.bin.list_metrics:main
+    - cwb_gather = gmprocess.bin.cwb_gather:main
 
 requirements:
   build:
-    - {{ compiler('c') }}
-  host:
-    - python
-    - cython
-    - numpy
+    - python >=3.9
     - pip
   run:
-    - python
-    - setuptools
-    - {{ pin_compatible('numpy') }}
-    - beautifulsoup4
-    - cartopy
-    - h5py >=2.8.0
-    - impactutils
-    - libcomcat
-    - lxml
-    - mapio
-    - matplotlib-base
-    - obspy >=1.2.1
-    - openpyxl
-    - openquake.engine >=3.10.1
-    - pandas
-    - prov
-    - ps2ff
-    - pyasdf
-    - pytest
-    - pytz
-    - pyyaml
-    - requests
-    - scipy
+    - python >=3.9
+    - beautifulsoup4 >=4.11
+    - configobj >=5.0.6
+    - esi-core >=1.0.1
+    - esi-utils-colors >1.0
+    - esi-utils-io >1.0
+    - esi-utils-rupture >1.0
+    - folium >=0.12
+    - h5py >=2.8
+    - lxml >=4.6.1
+    - matplotlib >=3.1.0
+    - numpy >=1.21
+    - obspy >=1.3.0
+    - openpyxl >=3.0.8
+    - pandas >=1.0
+    - ps2ff >=1.5.2
+    - pyasdf >=0.7
+    - requests >=2.23
+    - ruamel.yaml >=0.17.16
+    - schema >=0.7
+    - scipy >=1.7
+    - setuptools-scm >=6.3.2
+    - statsmodels >=0.12.2
+    - xlrd >=2.0
 
 test:
   commands:
     - gmprocess --help
-    - gmconvert --help
-    - gmsetup --help
-    - gmworkspace --help
-
-  imports: 
+    
+  imports:
     - gmprocess
 
 about:
-  home: https://github.com/usgs/groundmotion-processing
-  license: BSD-3-Clause
-  summary: Fetch and process strong motion waveform/peak amplitude data
+  home: https://code.usgs.gov/ghsc/esi/groundmotion-processing
+  license: Public Domain
+  summary: 'Parsing and processing ground motion data.'
   license_family: Public Domain
   license_file: LICENSE.md
 
 extra:
   recipe-maintainers:
     - mhearne-usgs
-    - hschovanec-usgs
+    - cbworden
     - emthompson-usgs
+    - gferragu
