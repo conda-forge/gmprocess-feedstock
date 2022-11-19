@@ -15,8 +15,7 @@ build:
   entry_points:
     - gmconvert = gmprocess.bin.gmconvert:main
     - gminfo = gmprocess.bin.gminfo:main
-    - gmprocess = gmprocess.bin.gmprocess:main
-    - gmsetup = gmprocess.bin.gmsetup:main
+    - gmrecords = gmprocess.bin.gmrecords:main
     - gmworkspace = gmprocess.bin.gmworkspace:main
     - list_metrics = gmprocess.bin.list_metrics:main
     - cwb_gather = gmprocess.bin.cwb_gather:main
@@ -54,8 +53,7 @@ requirements:
 
 test:
   commands:
-    - gmprocess --help
-    
+    - gminfo --help
   imports:
     - gmprocess
 
