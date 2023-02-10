@@ -5,7 +5,7 @@ Home: https://code.usgs.gov/ghsc/esi/groundmotion-processing
 
 Package license: LicenseRef-PublicDomain
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gmprocess-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gmprocess-feedstock/blob/main/LICENSE.txt)
 
 Summary: Parsing and processing ground motion data.
 
@@ -15,8 +15,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2313&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gmprocess-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2313&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gmprocess-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -147,4 +147,5 @@ Feedstock Maintainers
 * [@emthompson-usgs](https://github.com/emthompson-usgs/)
 * [@gferragu](https://github.com/gferragu/)
 * [@mhearne-usgs](https://github.com/mhearne-usgs/)
+* [@ocefpaf](https://github.com/ocefpaf/)
 
