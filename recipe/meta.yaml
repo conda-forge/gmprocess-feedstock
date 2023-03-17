@@ -1,5 +1,5 @@
 {% set name = "gmprocess" %}
-{% set version = "1.2.3" %}
+{% set version = "1.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gmprocess-{{ version }}.tar.gz
-  sha256: 9c9786aac6603db3c29d964a35d551b3f3cce384df7a8c9c9ad1e3d018af26b2
+  sha256: bdae3ffec6263e3903d5438b6a8dc20c9f4b9bef06acd3d63ab1974d54098f6b
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ build:
     - cwb_gather = gmprocess.bin.cwb_gather:main
 
 requirements:
-  build:
+  host:
     - python >=3.8,<3.11
     - pip
     - setuptools-scm >=6.3.2
@@ -61,7 +61,7 @@ test:
 about:
   home: https://code.usgs.gov/ghsc/esi/groundmotion-processing
   license: LicenseRef-PublicDomain
-  summary: 'Parsing and processing ground motion data.'
+  summary: Parsing and processing ground motion data.
   license_family: Public Domain
   license_file: LICENSE.md
 
