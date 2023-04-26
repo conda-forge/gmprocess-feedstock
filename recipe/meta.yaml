@@ -1,5 +1,5 @@
 {% set name = "gmprocess" %}
-{% set version = "1.2.4" %}
+{% set version = "1.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gmprocess-{{ version }}.tar.gz
-  sha256: 08f93a7f923f4ad70229884a39bfba73ee7edd3ff7f44ff98fc824746d22879b
+  sha256: a8ca8ece8d7d1deef76fabf4b79bfef946dcea0332ac2ab8518df0ff4256dc32
 
 build:
   noarch: python
