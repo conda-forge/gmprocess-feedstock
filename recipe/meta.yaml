@@ -1,5 +1,5 @@
 {% set name = "gmprocess" %}
-{% set version = "1.2.6" %}
+{% set version = "1.2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gmprocess-{{ version }}.tar.gz
-  sha256: a8ca8ece8d7d1deef76fabf4b79bfef946dcea0332ac2ab8518df0ff4256dc32
+  sha256: d60866603d437f13293cbdf162771dfea0d479c7e6297d49cac0c333e99c978e
 
 build:
   noarch: python
@@ -27,6 +27,8 @@ requirements:
     - setuptools >=42
     - setuptools-scm >=3.4
     - pip
+    - numpy
+    - wheel
   run:
     - python >=3.8,<3.11
     - beautifulsoup4 >=4.11
@@ -53,6 +55,7 @@ requirements:
     - scipy >=1.7
     - setuptools-scm >=6.3.2
     - statsmodels >=0.12.2
+    - usgs-strec >=2.2.6
     - xlrd >=2.0
 
 test:
