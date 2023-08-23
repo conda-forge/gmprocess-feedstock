@@ -71,6 +71,8 @@ about:
   summary: Parsing and processing ground motion data.
   license_family: Public Domain
   license_file: LICENSE.md
+  dev_url: https://code.usgs.gov/ghsc/esi/groundmotion-processing
+  doc_url: https://ghsc.code-pages.usgs.gov/esi/groundmotion-processing/
 
 extra:
   recipe-maintainers:
