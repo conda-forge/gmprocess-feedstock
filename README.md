@@ -9,6 +9,10 @@ Package license: LicenseRef-PublicDomain
 
 Summary: Parsing and processing ground motion data.
 
+Development: https://code.usgs.gov/ghsc/esi/groundmotion-processing
+
+Documentation: https://ghsc.code-pages.usgs.gov/esi/groundmotion-processing/
+
 Current build status
 ====================
 
