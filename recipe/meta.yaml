@@ -23,7 +23,7 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.11
+    - python >=3.9
     - setuptools >=42
     - setuptools-scm >=3.4
     - pip
@@ -32,7 +32,7 @@ requirements:
   run:
     - numba >=0.58
     - pydantic >=2.0
-    - python >=3.8,<3.11
+    - python >=3.9
     - beautifulsoup4 >=4.11.0
     - configobj >=5.0.6
     - esi-core >=1.0.1
