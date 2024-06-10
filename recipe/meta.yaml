@@ -1,5 +1,5 @@
 {% set name = "gmprocess" %}
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gmprocess-{{ version }}.tar.gz
-  sha256: 9720d3e76e0135b26099989240020bd782a19e2830daf0c46443579e826e16c1
+  sha256: 83fad885cac938f538fd49c0603bb0abfd85ec14ee058ac349d2c07d1187cb37
 
 build:
   noarch: python
@@ -45,7 +45,7 @@ requirements:
     - lxml >=4.6.1
     - matplotlib-base >=3.1.0
     - numpy >=1.21,<2.0
-    - obspy >=1.4.0
+    - obspy >=1.4.1
     - openpyxl >=3.0.8
     - openquake.engine >=3.18
     - pandas >=1.0
