@@ -1,5 +1,5 @@
 {% set name = "gmprocess" %}
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gmprocess-{{ version }}.tar.gz
-  sha256: ffea513ed1be6d74bf58815ab703814de2c0a6ed0ca3d17db10afa4ab2899011
+  sha256: 851958ad6de56d8fb421361ca1dc7b33dc5f2f999491edb1f85354036e739cd3
 
 build:
   noarch: python
