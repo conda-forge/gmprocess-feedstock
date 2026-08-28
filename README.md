@@ -3,15 +3,11 @@ About gmprocess-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gmprocess-feedstock/blob/main/LICENSE.txt)
 
-Home: https://code.usgs.gov/ghsc/esi/groundmotion-processing
+Home: https://pypi.org/project/gmprocess/
 
-Package license: LicenseRef-PublicDomain
+Package license: SL
 
-Summary: Parsing and processing ground motion data.
-
-Development: https://code.usgs.gov/ghsc/esi/groundmotion-processing
-
-Documentation: https://ghsc.code-pages.usgs.gov/esi/groundmotion-processing/
+Summary: USGS Automated Ground Motion Processing Software
 
 Current build status
 ====================
