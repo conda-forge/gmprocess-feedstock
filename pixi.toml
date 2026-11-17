@@ -5,7 +5,7 @@
 
 [workspace]
 name = "gmprocess-feedstock"
-version = "2026.8.9"  # conda-smithy version used to generate this file
+version = "2026.11.6"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/gmprocess-feedstock"
 authors = ["@conda-forge/gmprocess"]
 channels = ["conda-forge"]
@@ -29,6 +29,7 @@ description = "Lint the feedstock recipe"
 [feature.build.dependencies]
 conda-build = ">=26.3"
 conda-forge-ci-setup = "4.*"
+python = "3.14.*"
 rattler-build = "*"
 
 [feature.build.tasks.inspect-all]
@@ -38,11 +39,11 @@ description = "List contents of all packages found in rattler-build build direct
 cmd = "rattler-build build --recipe recipe"
 description = "Build gmprocess-feedstock directly (without setup scripts), no particular variant specified"
 [feature.build.tasks."build-linux_64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_.yaml "
 description = "Build gmprocess-feedstock with variant linux_64_ directly (without setup scripts)"
 [feature.build.tasks."debug-linux_64_"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_.yaml"
-description = "Build gmprocess-feedstock with variant linux_64_ directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_.yaml "
+description = "Debug gmprocess-feedstock with variant linux_64_ directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_64_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_.yaml"
 description = "List contents of gmprocess-feedstock packages built for variant linux_64_"
