@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   # esi-shakelib restriction
-  python_min: "3.12"
-  version: "2.8.0"
+  python_min: '3.12'
+  version: 2.9.0
 
 package:
   name: gmprocess
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/g/gmprocess/gmprocess-${{ version }}.tar.gz
-  sha256: 2fb2a1d645be77bd5b22197e770c6a003a37d1d70c0857a0022c333d90889b93
+  sha256: 6bbdf05fc5aa6bf6fddd6427239810b207eda6ebe3c58cd1a522ed539e1c2fe6
 
 build:
   number: 0
@@ -73,7 +73,7 @@ requirements:
     - tqdm >4.67
     - usgs-strec >=2.3.11
     - xlrd >=2.0
-
+    - prov >=2.1.1
 tests:
   - python:
       imports:
@@ -81,7 +81,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
   - requirements:
       run:
         - pip
