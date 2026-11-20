@@ -3,7 +3,7 @@ schema_version: 1
 context:
   # esi-shakelib restriction
   python_min: '3.12'
-  version: 2.9.0
+  version: 2.9.1
 
 package:
   name: gmprocess
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/g/gmprocess/gmprocess-${{ version }}.tar.gz
-  sha256: 6bbdf05fc5aa6bf6fddd6427239810b207eda6ebe3c58cd1a522ed539e1c2fe6
+  sha256: df038ef837ed3df1e500c5ece145c5aa1d67b95bf91f4e69ce5958d4c009f8ef
 
 build:
   number: 0
@@ -63,8 +63,6 @@ requirements:
     - ps2ff >=1.5.9
     - pyarrow
     - pyasdf >=0.7
-    # pydantic[email]
-    - email-validator
     - pydantic >=2.0
     - rdflib >=6.3.2
     - requests >=2.29
@@ -76,7 +74,6 @@ requirements:
     - tqdm >4.67
     - usgs-strec >=2.3.11
     - xlrd >=2.0
-
 tests:
   - python:
       imports:
